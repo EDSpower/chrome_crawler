@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "爬取图片助手",
+  "version": "1.0",
+  "description": "实现当前页面的图片爬取",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon16.png",
+      "38": "images/icon48.png"
+    },
+    "default_title": "爬取图片助手",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["js/getimgs.js"]
+    }
+]
+}
